@@ -41,8 +41,7 @@ int main()
     this_thread::sleep_for(chrono::seconds(1));
 
     cout << "I am writing some words down ... " << endl;
-    ofstream logfile;
-    logfile.open ("log.txt");
+    ofstream logfile ("logs/logs.txt");
     logfile << "----------------------------- \n" ;
     logfile << "The local date and time is " + string(dt) + "\n" ;
     logfile.close();
